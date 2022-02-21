@@ -1,12 +1,7 @@
-// Java implementation of the approach
-package Assignment3;
-
-import java.util.Scanner;
-
-public class RainWaterTraping{
-
-public static int maxWater(int[] arr)
-	{
+import java.util.*;
+public class Main {
+    public static int maxWater(int[] arr)
+    	{
 		int n = arr.length;
 		int res = 0;
 	
@@ -49,4 +44,3 @@ public static int maxWater(int[] arr)
 		}
 	}
 }
-

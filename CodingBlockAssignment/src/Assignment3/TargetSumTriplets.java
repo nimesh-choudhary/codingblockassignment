@@ -1,9 +1,6 @@
-package Assignment3;
-
-import java.util.Scanner;
-
-public class TargetSumTriplets {
-	public static int[] sortArray(int arr[]) {
+import java.util.*;
+public class Main {
+    public static int[] sortArray(int arr[]) {
 		int n = arr.length;
 //		int sort_array[] = new int[n];
 		int temp = 0;

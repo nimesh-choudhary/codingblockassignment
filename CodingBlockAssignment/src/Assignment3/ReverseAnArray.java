@@ -1,11 +1,7 @@
-package Assignment3;
-
-import java.util.Arrays;
-import java.util.Scanner;
-
-public class ReverseAnArray {
-	public static void main(String[] args) {
-		int N;
+import java.util.*;
+public class Main {
+    public static void main(String args[]) {
+        int N;
 		Scanner sc = new Scanner(System.in);
 		N = sc.nextInt();
 		if(N>0) {
@@ -19,8 +15,8 @@ public class ReverseAnArray {
 			}
 //			System.out.println("array-> "+Arrays.toString(arr_new));
 			for(int i = 0;i<N;i++) {
-				System.out.print(arr_new[i]+" ");
+				System.out.println(arr_new[i]);
 			}
 		}
-	}
+    }
 }

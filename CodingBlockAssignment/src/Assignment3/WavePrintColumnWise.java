@@ -1,20 +1,7 @@
-package Assignment3;
-
-import java.util.Scanner;
-
-public class WavePrintColumnWise {
-	public static void print(int arr[][]) {
-		int r = arr.length;
-		int c = arr[0].length;
-		for(int i = 0;i<r;i++) {
-			for(int j = 0;j<c;j++) {
-				System.out.print(arr[i][j]+" ");
-			}
-			System.out.println();
-		}
-	}
-	public static void main(String[] args) {
-		int N,M;
+import java.util.*;
+public class Main {
+    public static void main(String args[]) {
+        int N,M;
 		Scanner sc = new Scanner(System.in);
 		N = sc.nextInt();
 		if(N>=1 && N<=10) {
@@ -41,5 +28,5 @@ public class WavePrintColumnWise {
 				System.out.print("END");
 			}
 		}
-	}
+    }
 }

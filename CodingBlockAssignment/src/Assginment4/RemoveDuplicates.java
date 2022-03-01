@@ -1,9 +1,6 @@
-package Assginment4;
-
-import java.util.Scanner;
-
-public class RemoveDuplicates {
-	public static String removeDuplicates(String s) {
+import java.util.*;
+public class Main {
+    public static String removeDuplicates(String s) {
 		if(s.length()<=1) {
 			return s;
 		}

@@ -1,39 +1,51 @@
-package Assginment4;
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String s = sc.next();
+        int n = s.length();
 
-import java.util.Scanner;
+        int count = 0;
+        int maxCount = 0;
 
-public class CountPalindromeSubString {
-	public static void main(String[] args) {
-		String s;
-		Scanner sc = new Scanner(System.in);
-		s = sc.next();
-		if(s.length()>=1 && s.length()<=1000) {
-			int dp[][] = new int[s.length()][s.length()];
-			boolean p[][] = new boolean[s.length()][s.length()];
-			for(int i = 0;i<s.length();i++) {
-				p[i][i] = true;
-			}
-			for(int i = 0;i<s.length() - 1;i++) {
-				if(s.charAt(i) == s.charAt(i+1)) {
-					p[i][i+1] = true;
-					dp[i][i+1] = 1;
-				}
-			}
-			for(int i = 2;i<s.length();i++) {
-				for(int j = 0;j<s.length()-i;j++) {
-					int k = i + j;
-					if(s.charAt(j) == s.charAt(k) && p[j+1][k-1]) {
-						p[j][k] = true;
-					}
-					if(p[j][k] == true) {
-						dp[j][k] = dp[j][k-1] + dp[j+1][k] + 1 - dp[j+1][k-1];
-					}
-					else {
-						dp[j][k] = dp[j][k-1] + dp[j+1][k] - dp[j+1][k-1];
-					}
-				}
-			}
-			System.out.println(dp[0][s.length()-1]);
-		}
-	}
+        for (int i=0; i<n; i++){
+            boolean ans = true;
+            char ch = s.charAt(i);
+
+            for (int j=i; j<n; j++){
+                if (s.charAt(i)!=s.charAt(j)){
+                    ans = false;
+                } else{
+                    count++;
+                }
+            }
+
+            if (count>maxCount){
+                maxCount = count;
+            }
+        }
+
+        System.out.println(maxCount);
+    }
+
+
+    public static boolean isPalindrome(String s){
+        int n = s.length();
+        int idx = 0;
+        int revIdx = n-1;
+        boolean ans = true;
+
+        for(int i=0; i<n/2; i++){
+            char ch = s.charAt(i);
+
+            if(s.charAt(idx)!=s.charAt(revIdx)){
+                ans = false;
+            }
+            idx++;
+            revIdx--;
+        }
+
+        return ans;
+    }
+
 }

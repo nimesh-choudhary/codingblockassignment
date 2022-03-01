@@ -1,10 +1,10 @@
-package Assginment4;
+// package Assginment4;
 
 import java.util.HashSet;
 import java.util.Scanner;
 import java.util.Set;
 
-public class LongestSubstringKDistinctCharacters {
+public class Main {
 	public static final int char_range = 128;
 	public static String longestSubString(String s,int k) {
 		if(s == null || s.length() == 0) {
@@ -44,7 +44,7 @@ public class LongestSubstringKDistinctCharacters {
 				System.out.println(s_new.length());
 //				System.out.println(longestSubString(s,k));
 			}
-			t--;
+            t--;
 		}
 	}
 }
